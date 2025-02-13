@@ -1430,6 +1430,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cookie@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "@types/cookie@npm:0.6.0"
+  checksum: 10c6/9f789f3985d5464649fa301c2982a95fe5dbfbca63f8ee89287e977ec85aa546bee299ee8354c44341f7afd78e9ab635d30937f95c75000a3278cbb1aed11cfb
+  languageName: node
+  linkType: hard
+
 "@types/estree@npm:1.0.6, @types/estree@npm:^1.0.6":
   version: 1.0.6
   resolution: "@types/estree@npm:1.0.6"
@@ -1785,6 +1792,13 @@ __metadata:
   version: 0.0.1
   resolution: "concat-map@npm:0.0.1"
   checksum: 10c6/080a4017cd6cb422f9f11dd8a9e9207625b5457b18e220800722696e27170413d7da4f3f1cb478c6677d66784007e21ef9e4783720c904d5acd8de54af5677cf
+  languageName: node
+  linkType: hard
+
+"cookie@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "cookie@npm:1.0.2"
+  checksum: 10c6/5effe3622934da496c2a2c429ff4b1f2fcbed5468e95a512df7005c60cadc9e8e841464d2534b50ebcee7324520d0b4d076b5d5e2f21418d783d8f18e89406a1
   languageName: node
   linkType: hard
 
@@ -3105,6 +3119,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-router@npm:^7.1.5":
+  version: 7.1.5
+  resolution: "react-router@npm:7.1.5"
+  dependencies:
+    "@types/cookie": "npm:^0.6.0"
+    cookie: "npm:^1.0.1"
+    set-cookie-parser: "npm:^2.6.0"
+    turbo-stream: "npm:2.4.0"
+  peerDependencies:
+    react: ">=18"
+    react-dom: ">=18"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+  checksum: 10c6/f932806d62bd7a9c3c1b26a05be13cafe9d61deb6d80a0050a343e7920c21f5b0e159bee74429567c77e9ee3487cdd7ea68b18d8587777cf521d352909004ac9
+  languageName: node
+  linkType: hard
+
 "react@npm:^19.0.0":
   version: 19.0.0
   resolution: "react@npm:19.0.0"
@@ -3259,6 +3291,13 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: 10c6/d4fec4ed69fcec195eee8a3376ce436aea93f330cd064c5f83ba914104a617ce9921be44f0091fcd52820be7c4aaaa7093532c9004f062fb01c17897a5ca94e5
+  languageName: node
+  linkType: hard
+
+"set-cookie-parser@npm:^2.6.0":
+  version: 2.7.1
+  resolution: "set-cookie-parser@npm:2.7.1"
+  checksum: 10c6/747504f45dec3b48ed94ca0349bab259ef917ba5c9c99d12632628cd8613e7ea396a57e2c5dd8ec8441fa6fd919026da5355926e8323b8e8913a697fcb6bb618
   languageName: node
   linkType: hard
 
@@ -3436,6 +3475,7 @@ __metadata:
     globals: "npm:^15.15.0"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
+    react-router: "npm:^7.1.5"
     tailwindcss: "npm:^4.0.6"
     typescript: "npm:^5.7.3"
     typescript-eslint: "npm:^8.24.0"
@@ -3465,6 +3505,13 @@ __metadata:
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c6/1addc8908baeb21afb885296c6ed5ae62211b498d4b685310fa63537e1657fb41e21dd82a424b8f11ffbdaed3c61fe19bfd4c22df9ab7081e893553d93d75039
+  languageName: node
+  linkType: hard
+
+"turbo-stream@npm:2.4.0":
+  version: 2.4.0
+  resolution: "turbo-stream@npm:2.4.0"
+  checksum: 10c6/d835c78aa67db1f48b4891fac3fea596fe529b7fe723cc866df1cc142da2728468e88a771bf1694f84605af69eb5a78a4cb4e7a9e83fd310fd8a9c6da542a001
   languageName: node
   linkType: hard
 
