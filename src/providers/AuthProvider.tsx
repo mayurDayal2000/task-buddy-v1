@@ -8,6 +8,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { auth, googleProvider } from "../config/firebase";
 import { AuthContext } from "../contexts/AuthContext";
+import { Spinner } from "../components/ui/Spinner";
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -15,12 +16,14 @@ interface AuthProviderProps {
 
 export default function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
+      setIsLoading(false);
 
       if (user && !location.pathname.startsWith("/dashboard")) {
         navigate("/dashboard/list-view", { replace: true });
@@ -45,6 +48,10 @@ export default function AuthProvider({ children }: AuthProviderProps) {
       console.error("Error signing out: ", error);
     }
   };
+
+  if (isLoading) {
+    return <Spinner />;
+  }
 
   return (
     <AuthContext.Provider value={{ user, login, logout }}>

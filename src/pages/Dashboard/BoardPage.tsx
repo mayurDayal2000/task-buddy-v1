@@ -1,8 +1,16 @@
+import { Navigate } from "react-router";
 import Header from "../../components/Header/Header";
 import TabMenu from "../../components/TabMenu/TabMenu";
 import { BoardCard } from "../../components/ui/BoardCard";
+import useIsDesktop from "../../hooks/useIsDesktop";
 
 export default function BoardPage() {
+  const isDesktop = useIsDesktop();
+
+  if (!isDesktop) {
+    return <Navigate to="/dashboard/list-view" replace />;
+  }
+
   return (
     <>
       <Header />
