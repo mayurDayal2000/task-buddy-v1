@@ -5,7 +5,7 @@ import {
   User,
 } from "firebase/auth";
 import { ReactNode, useEffect, useState } from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { auth, googleProvider } from "../config/firebase";
 import { AuthContext } from "../contexts/AuthContext";
 
@@ -16,18 +16,19 @@ interface AuthProviderProps {
 export default function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
 
-      if (user) {
-        navigate("/dashboard");
+      if (user && !location.pathname.startsWith("/dashboard")) {
+        navigate("/dashboard/list-view", { replace: true });
       }
     });
 
     return unsubscribe;
-  }, [navigate]);
+  }, [location.pathname, navigate]);
 
   const login = async () => {
     try {
