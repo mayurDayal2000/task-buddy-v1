@@ -1,7 +1,16 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+/**
+ * Firebase configuration and initialization module
+ *
+ * This module centralizes all Firebase service initializations and exports
+ * the necessary instances for authentication and data storage.
+ * Environment variables are used to protect sensitive configuration details.
+ */
+import { initializeApp, FirebaseApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider, Auth } from "firebase/auth";
+import { getFirestore, Firestore } from "firebase/firestore";
 
+// Firebase configuration object sourced from environment variables
+// These are injected by Vite during the build process
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -11,16 +20,16 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Initialize Firebase app with configuration
+const app: FirebaseApp = initializeApp(firebaseConfig);
 
-// Initialize Authentication
-const auth = getAuth(app);
+// Initialize Authentication service
+const auth: Auth = getAuth(app);
 
-// Initialize Google Provider
+// Initialize Google Authentication Provider
 const googleProvider = new GoogleAuthProvider();
 
-// Initialize Firestore DB
-const db = getFirestore(app);
+// Initialize Firestore Database
+const db: Firestore = getFirestore(app);
 
 export { auth, googleProvider, db };
