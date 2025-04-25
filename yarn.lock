@@ -1793,13 +1793,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/cookie@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "@types/cookie@npm:0.6.0"
-  checksum: 10c6/9f789f3985d5464649fa301c2982a95fe5dbfbca63f8ee89287e977ec85aa546bee299ee8354c44341f7afd78e9ab635d30937f95c75000a3278cbb1aed11cfb
-  languageName: node
-  linkType: hard
-
 "@types/estree@npm:1.0.6, @types/estree@npm:^1.0.0, @types/estree@npm:^1.0.6":
   version: 1.0.6
   resolution: "@types/estree@npm:1.0.6"
@@ -3695,11 +3688,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:^7.1.5":
-  version: 7.1.5
-  resolution: "react-router@npm:7.1.5"
+"react-router@npm:^7.5.2":
+  version: 7.5.2
+  resolution: "react-router@npm:7.5.2"
   dependencies:
-    "@types/cookie": "npm:^0.6.0"
     cookie: "npm:^1.0.1"
     set-cookie-parser: "npm:^2.6.0"
     turbo-stream: "npm:2.4.0"
@@ -3709,7 +3701,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 10c6/f932806d62bd7a9c3c1b26a05be13cafe9d61deb6d80a0050a343e7920c21f5b0e159bee74429567c77e9ee3487cdd7ea68b18d8587777cf521d352909004ac9
+  checksum: 10c6/a9afbc9a94219c7a2e1668fcef8bb6e0944b2dc653ffaddaa73fbaaacb3085fc1bf83fd7cbd085880e2227dddbc99083c090650ff3e40c3ccd7c4a3bb1cffe3b
   languageName: node
   linkType: hard
 
@@ -4077,7 +4069,7 @@ __metadata:
     globals: "npm:^15.15.0"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
-    react-router: "npm:^7.1.5"
+    react-router: "npm:^7.5.2"
     tailwindcss: "npm:^4.0.6"
     typescript: "npm:^5.7.3"
     typescript-eslint: "npm:^8.24.0"
