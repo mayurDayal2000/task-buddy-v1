@@ -3409,12 +3409,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mkdirp@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "mkdirp@npm:3.0.1"
-  bin:
-    mkdirp: dist/cjs/src/bin.js
-  checksum: 10c6/2af83cb994ce89c938270ecf9fe6ad6b1b482da60385f237dc6223d0230c340b832e65d9bd378fca99dea3e9dba6beb7c9a94f251997884582e89aaa9ca08dde
+"minizlib@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "minizlib@npm:3.1.0"
+  dependencies:
+    minipass: "npm:^7.1.2"
+  checksum: 10c6/d12d5d57fedb59fd8b5c76d6b14f640c140acce8413aaee5de5d81b378623df316ff9a20e49ab929b33332e3b4658b398b885d5debcc9ee970f19607f5a7faa5
   languageName: node
   linkType: hard
 
@@ -4048,16 +4048,15 @@ __metadata:
   linkType: hard
 
 "tar@npm:^7.4.3":
-  version: 7.4.3
-  resolution: "tar@npm:7.4.3"
+  version: 7.5.7
+  resolution: "tar@npm:7.5.7"
   dependencies:
     "@isaacs/fs-minipass": "npm:^4.0.0"
     chownr: "npm:^3.0.0"
     minipass: "npm:^7.1.2"
-    minizlib: "npm:^3.0.1"
-    mkdirp: "npm:^3.0.1"
+    minizlib: "npm:^3.1.0"
     yallist: "npm:^5.0.0"
-  checksum: 10c6/2393f406baf8404c85386e09582e3225a543afaebf931508ef411294e5a2275a00060427c4bd8e8f2b8dbb5210db628c966cec2e1b45662a420f19b1d5ea82cb
+  checksum: 10c6/92c5e00fba7f432bc92f7c486359b21e02f27e5bcf286643a58d2557ae660eeab700285dba099ee0188c6267549d81473fb5200e6701a654e5ceee679b1141a0
   languageName: node
   linkType: hard
 
